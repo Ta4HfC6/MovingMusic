@@ -1,27 +1,56 @@
-# IDE / Editor
-.vscode/
-.idea/
-.old/
-*.swp
-*.swo
-*~
+# Arduino / PlatformIO build output
+build/
+out/
+.arduino/
+.pio/
+.pioenvs/
+.piolibdeps/
+*.bin
+*.elf
+*.hex
+*.map
+*.uf2
+*.eep
+*.o
+*.a
+*.d
 
-# Legacy files (removed in v3.0.0)
-/displayhandler.h
-/displayhandler.cpp
-/T-DisplayS3_Host_MIDI.ino
-/ESP32_Host_MIDI.ino
-/MIDI_PCM5102A_Handler.h
-/MIDI_PCM5102A_Handler.cpp
-/ESP32_PCM5102A_MIDI.h
-/ESP32_PCM5102A_MIDI.cpp
-/src/src.ino
-
-# Build output
-site/
-experimental/
+# Native test executables
 extras/tests/test_native
 extras/tests/test_handler
 extras/tests/test_midi2_scan
 extras/tests/test_usb_send
-extras/tests/test_integrationROADMAP.md
+extras/tests/*.exe
+
+# Local configuration and secrets
+secrets.h
+credentials.h
+*.local.h
+.env
+.env.*
+!.env.example
+
+# IDE / editor
+.vscode/
+.idea/
+*.code-workspace
+*.swp
+*.swo
+*~
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+*.stackdump
+
+# Local experimental work
+experimental/
+site/

@@ -55,9 +55,7 @@ jobs:
         run: ./extras/tests/test_midi2_scan
 
   # ---------------------------------------------------------------------------
-  # Job 2 — Arduino compile check (ESP32-S3)
-  # Verifies the library compiles with the real ESP32 Arduino toolchain.
-  # Uses the simplest example (UART-only, no external display libraries).
+  # Job 2 — Arduino compile check (ESP32-S3 BLE-MIDI application)
   # ---------------------------------------------------------------------------
   arduino-compile:
     name: Arduino compile — ESP32-S3
@@ -75,6 +73,4 @@ jobs:
           libraries: |
             - source-path: ./
           sketch-paths: |
-            - examples/P4-Dual-UART-MIDI
-            - examples/UART-MIDI-Basic
-            - examples/USB-Host-MIDI2
+            - examples/Piano-MIDI-Legend-BLE-Lab
