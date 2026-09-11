@@ -66,31 +66,9 @@ Arduino IDE 中选择与实际开发板对应的型号；通用开发板可先�
 examples/Piano-MIDI-Legend-BLE-Lab/Piano-MIDI-Legend-BLE-Lab.ino
 ```
 
-本机独立 Arduino CLI 的编译命令：
-
-```powershell
-& "D:\Apps\Arduino IDE\arduino-cli-standalone\arduino-cli.cmd" compile `
-  --fqbn esp32:esp32:esp32s3 `
-  --library "D:\MyLibrary\MovingMusic\ESP32_Host_MIDI" `
-  "D:\MyLibrary\MovingMusic\ESP32_Host_MIDI\examples\Piano-MIDI-Legend-BLE-Lab"
-```
-
-上传到当前开发板：
-
-```powershell
-& "D:\Apps\Arduino IDE\arduino-cli-standalone\arduino-cli.cmd" upload `
-  -p COM4 `
-  --fqbn esp32:esp32:esp32s3 `
-  "D:\MyLibrary\MovingMusic\ESP32_Host_MIDI\examples\Piano-MIDI-Legend-BLE-Lab"
-```
-
-COM 端口可能随电脑和 USB 接口变化，上传前可运行：
-
-```powershell
-& "D:\Apps\Arduino IDE\arduino-cli-standalone\arduino-cli.cmd" board list
-```
-
 ## Android 连接
+
+需要 Bluetooth MIDI Connect 和 Piano MIDI Legend。
 
 1. 给 Bluetooth MIDI Connect 授予“附近设备/蓝牙”权限；部分 Android 版本还要求位置权限。
 2. 在 Bluetooth MIDI Connect 中扫描并连接 `MovingMusic S3`。
